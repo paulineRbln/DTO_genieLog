@@ -6,6 +6,9 @@ public class Course{
     public string Title {get;set;}
     public int Credits {get;set;}
     public List<Enrollment> Enrollments {get;set;}
+    public int DepartmentId {get;set;}
+    public Department Department {get;set;}
+    public List<Instructor> Instructors {get;set;}
 
     public Course() { }
 

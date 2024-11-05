@@ -5,7 +5,7 @@ namespace ApiUniversity.Data;
 public class SeedData
 {
     // Test data for part 1 and 2
-    
+    /*
     public void Init()
     {
         using var context = new DBContext();
@@ -124,11 +124,11 @@ public class SeedData
 
         // Commit changes into DB
         context.SaveChanges();
-    }
+    }*/
 
-    /*
+    
     // Test data for part 3
-    public static void Init()
+    public void Init()
     {
         using var context = new DBContext();
         // Look for existing content
@@ -285,6 +285,6 @@ public class SeedData
         // Commit changes into DB
         context.SaveChanges();
     }
-    */
+    
     
 }
