@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\2A\\S7\\GENIE LOG\\TP6\\ApiUniversity.csproj": {}
+    "H:\\2A\\S7\\GENIE LOG\\TP6\\DTO_genieLog\\ApiUniversity.csproj": {}
   },
   "projects": {
-    "H:\\2A\\S7\\GENIE LOG\\TP6\\ApiUniversity.csproj": {
+    "H:\\2A\\S7\\GENIE LOG\\TP6\\DTO_genieLog\\ApiUniversity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\2A\\S7\\GENIE LOG\\TP6\\ApiUniversity.csproj",
+        "projectUniqueName": "H:\\2A\\S7\\GENIE LOG\\TP6\\DTO_genieLog\\ApiUniversity.csproj",
         "projectName": "ApiUniversity",
-        "projectPath": "H:\\2A\\S7\\GENIE LOG\\TP6\\ApiUniversity.csproj",
+        "projectPath": "H:\\2A\\S7\\GENIE LOG\\TP6\\DTO_genieLog\\ApiUniversity.csproj",
         "packagesPath": "C:\\Users\\problin\\.nuget\\packages\\",
-        "outputPath": "H:\\2A\\S7\\GENIE LOG\\TP6\\obj\\",
+        "outputPath": "H:\\2A\\S7\\GENIE LOG\\TP6\\DTO_genieLog\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\problin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -46,6 +46,16 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
