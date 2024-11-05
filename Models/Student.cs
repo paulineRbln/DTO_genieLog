@@ -6,6 +6,7 @@ public class Student {
     public string LastName {get; set;}
     public string FirstName {get; set;}
     public DateTime? EnrollmentDate {get;set;}
+    public string Email {get;set;}
 
     public List<Enrollment> Enrollements {get;set;}
     
@@ -17,6 +18,6 @@ public class Student {
         LastName = studentDTO.LastName;
         FirstName = studentDTO.FirstName;
         EnrollmentDate = studentDTO.EnrollmentDate;
-        Enrollements = studentDTO.Enrollements;
+        Email = studentDTO.Email;
     }
 }

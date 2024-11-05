@@ -44,21 +44,23 @@ public class StudentController : ControllerBase
 
     // POST: api/student
     [HttpPost]
-    public async Task<ActionResult<StudentDTO>> PostStudent(Student student)
+    public async Task<ActionResult<StudentDTO>> PostStudent(StudentDTO studentDTO)
     {
+        Student student = new Student(studentDTO);
         _context.Students.Add(student);
         await _context.SaveChangesAsync();
 
-        return CreatedAtAction(nameof(GetStudent), new { id = student.ID }, student);
+        return CreatedAtAction(nameof(GetStudent), new { id = student.ID }, new StudentDTO(student));
     }
 
     // PUT: api/todo/2
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutStudent(int id, StudentDTO student)
+    public async Task<IActionResult> PutStudent(int id, StudentDTO studentDTO)
     {
-        if (id != student.ID)
+        if (id != studentDTO.ID)
             return BadRequest();
 
+        Student student = new Student(studentDTO);
         _context.Entry(student).State = EntityState.Modified;
 
         try

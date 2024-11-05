@@ -1,3 +1,6 @@
+using ApiUniversity.Data;
+using ApiUniversity.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -18,6 +21,7 @@ builder.Services.AddDbContext<DBContext>();
 
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

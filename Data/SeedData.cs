@@ -5,6 +5,7 @@ namespace ApiUniversity.Data;
 public class SeedData
 {
     // Test data for part 1 and 2
+    
     public void Init()
     {
         using var context = new DBContext();
@@ -19,24 +20,28 @@ public class SeedData
         {
             FirstName = "Alexander",
             LastName = "Carson",
+            Email = "alexander.carson@test.com",
             EnrollmentDate = DateTime.Parse("2016-09-01"),
         };
         Student alonso = new()
         {
             FirstName = "Meredith",
             LastName = "Alonso",
+            Email = "meredith15@glog.com",
             EnrollmentDate = DateTime.Parse("2018-09-01"),
         };
         Student anand = new()
         {
             FirstName = "Arturo",
             LastName = "Anand",
+            Email = "a.anand@test.com",
             EnrollmentDate = DateTime.Parse("2019-09-01"),
         };
         Student barzdukas = new()
         {
             FirstName = "Gytis",
             LastName = "Barzdukas",
+            Email = "gytis-barzdukas@it.com",
             EnrollmentDate = DateTime.Parse("2018-09-01"),
         };
         context.Students.AddRange(
@@ -281,4 +286,5 @@ public class SeedData
         context.SaveChanges();
     }
     */
+    
 }
