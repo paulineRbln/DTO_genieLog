@@ -47,5 +47,32 @@ public class InstructorController : ControllerBase
         return CreatedAtAction(nameof(GetInstructor), new { id = instructor.Id }, new InstructorDTO(instructor));
     }
 
+    // POST: api/instructor/{InstructorId}/course
+    [HttpPost("{instructorId}/course")]
+    public async Task<ActionResult> AssignCoursesToInstructor(int instructorId)
+    {
+        // Récupérer l'instructeur par son ID
+        var instructor = await _context.Instructors
+            .Include(i => i.Courses)  // Inclure les cours déjà assignés
+            .FirstOrDefaultAsync(i => i.Id == instructorId);
+
+        if (instructor == null)
+        {
+            return NotFound($"Instructor with ID {instructorId} not found.");
+        }
+
+        var courseIds = instructor.Courses.Select(c => c.Id).ToList();
+
+        TaughtCourseDTO liste = new TaughtCourseDTO();
+        liste.CourseIds = courseIds;
+
+
+        // Sauvegarder les modifications dans la base de données
+        await _context.SaveChangesAsync();
+
+        // Retourner une réponse indiquant que l'opération a été réussie
+        return Ok(liste); // 204 No Content pour indiquer que l'opération a réussi
+    }
+
 
 }
