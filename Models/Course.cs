@@ -17,5 +17,6 @@ public class Course{
         Id = courseDTO.Id;
         Title = courseDTO.Title;
         Credits = courseDTO.Credits;
+        DepartmentId = courseDTO.DepartmentId;
     }
 }

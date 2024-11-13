@@ -14,7 +14,7 @@ namespace ApiUniversity.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "8.0.0");
+            modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
 
             modelBuilder.Entity("ApiUniversity.Models.Course", b =>
                 {
@@ -56,7 +56,7 @@ namespace ApiUniversity.Migrations
 
                     b.HasIndex("InstructorId");
 
-                    b.ToTable("Department");
+                    b.ToTable("Departments");
                 });
 
             modelBuilder.Entity("ApiUniversity.Models.Enrollment", b =>
@@ -102,7 +102,7 @@ namespace ApiUniversity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Instructor");
+                    b.ToTable("Instructors");
                 });
 
             modelBuilder.Entity("ApiUniversity.Models.Student", b =>
